@@ -18,7 +18,7 @@
                 </svg>
             </button>
             <form id="searchForm">
-                <input type="text" name="search" id="search" placeholder="Enter your city" autocomplete="off">
+                <input type="text" name="city" id="city" placeholder="Enter your city" autocomplete="off">
             </form>
             <button type="submit" form="searchForm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -29,13 +29,13 @@
 
         <!--Weather Image-->
         <div class="text-center">
-            <img src="images/cloudy.png" alt="Weather" class="weather-img">
+            <img src="images/cloudy.png" alt="Weather" class="weather-img" id="weatherImg">
         </div>
         <div class="text-center">
             <h1>
                 <span id="temperature">12</span><small>°C</small>
             </h1>
-            <p>Parialy Cloudy</p>
+            <p id="description">Parialy Cloudy</p>
         </div>
 
         <!--Weather Info-->

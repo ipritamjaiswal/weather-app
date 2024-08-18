@@ -1,22 +1,72 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
     color: #fefefe;
 }
 
 body {
-    background-color: #222325;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(16, 19, 22);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    background-color: #98025c;
     padding: 20px;
+    background-color: #7a063c;
+    min-height: 100vh;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 7px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+form {
     width: 100%;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    color: #fefefe;
+    text-transform: capitalize;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.weather-img {
+    padding: 50px 0 10px 0;
+    width: 130px;
 }
 
 .flex-box {
@@ -24,29 +74,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
-/* Utility */
-.flex-column {flex-direction: column;}
-.flex-start {align-items: flex-start;}
-.border {border: 1px solid rgba(255, 255, 255, 0.5);}
-.rounded {border-radius: 5px;}
-.text-center {text-align:center;}
-.text-secondary {color: #cfd8de;}
-.gap {gap: 10px;}
-.p-1 {padding: 10px;}
-.p-2 {padding: 20px;}
-.p-3 {padding: 30px;}
-
-h1 {
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 1.4;
+.weather-info {
+    margin-top: 30px;
+    background-color: #8d0a47;
+    padding: 20px;
+    border-radius: 10px;
 }
-
-button  {
-    background-color: transparent;
-    border: none;
-}
-
-.weather-img {width: 200px;}

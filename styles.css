@@ -71,8 +71,7 @@ input::placeholder {
 }
 
 .weather-img {
-    padding: 50px 0 10px 0;
-    width: 130px;
+    width: 150px;
 }
 
 .flex {
@@ -99,6 +98,7 @@ h1 {
     position: relative;
     font-weight: 300;
     font-size: 2.7rem;
+    margin-top: -10px;
     margin-bottom: 10px;
 }
 

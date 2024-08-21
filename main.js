@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const humidity = document.querySelector('#humidity');
             const wind = document.querySelector('#wind');
 
-            if (['Clouds', 'Clear', 'Mist', 'Rain', 'Snow'].includes(json.weather[0].main)) {
+            if (['Clouds', 'Clear', 'Mist', 'Rain', 'Snow', 'Haze'].includes(json.weather[0].main)) {
                 image.src = `images/${json.weather[0].main}.png`;
             } else {
-                image.src = 'images/Clouds.png';
+                image.src = 'images/Haze.png';
             }
             
             temperature.innerHTML = `${parseInt(json.main.temp)}`;

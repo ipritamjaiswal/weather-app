@@ -1,3 +1,6 @@
+
+const APIKey = "43324e38d74f2a504828f76dada1bd7c";
+
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const searchForm = document.querySelector('#searchForm');
@@ -6,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Prvent form from sumitting
         e.preventDefault();
 
-        const APIKey = "43324e38d74f2a504828f76dada1bd7c";
         const city = document.querySelector('#city').value;
 
         if (city == '') {
@@ -43,3 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Function to get the location
+function get_location() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            let location = getLocationName(latitude, longitude);
+
+            document.querySelector('#city').value = location;
+            document.querySelector('#searchForm').submit();
+
+        });
+    }
+    else {
+        alert("Location in not supported by this browser!");
+    }
+}
+
+function getLocationName(latitude, longitude) {
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${APIKey}`)
+    .then(response => response.json())
+    .then (data => {
+        const location = data.result[0].formatted;
+        return location;
+    })
+    .catch(error => alert("Unable to get location!"));
+}
